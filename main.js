@@ -64,6 +64,8 @@ function renderWeather({ current, daily, hourly }) {
   renderHourlyWeather(hourly)
   // remove blurred class over body when loaded
   document.body.classList.remove("blurred")
+  document.querySelector(".blurred").classList.remove("blurred");
+  document.querySelector(".loading").classList.add("hidden");
 }
 
 // helper function for the renderCurrentWeather function
@@ -429,10 +431,18 @@ if ("geolocation" in navigator) {
 
 
 
+        // safety feature. If .green-arrow-current and .pollution-angle-class are not aligned execute the following code:
+
+        // Call the rotation function with a delay of 500ms
+        // setTimeout(() => {
+        //   newArrowRotate(document.querySelectorAll('.green-arrow-current'), windDeg);
+        //   newArrowRotate(document.querySelectorAll('.pollution-angle-class'), windDeg);
+        // }, 500);
+
+
 
 
         //  green arrow and map pollution direction based on improved api
-
         newArrowRotate(document.querySelectorAll('.green-arrow-current'), windDeg)
         newArrowRotate(document.querySelectorAll('.pollution-angle-class'), windDeg)
 
@@ -442,7 +452,7 @@ if ("geolocation" in navigator) {
             elems.forEach(function (el) {
               el.style.transform = "rotate(" + (windDeg + 180) + "deg)";
             });
-          }, 100); // Add a delay of 100 milliseconds (adjust as needed) ( a delay of 50 milliseconds breakes the code )
+          }, 500); // Add a delay of 100 milliseconds (adjust as needed) ( a delay of 50 milliseconds breakes the code )
         }
 
 
@@ -614,7 +624,39 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// desktop code for permanently having pollution components
+// ...............................................................................
+// Function to toggle the visibility of the pollution data based on window width
+function togglePollutionDataVisibility() {
+  const windowWidth = window.innerWidth;
+  const pollutionDataElement = document.getElementById("pollution-data");
 
+  if (windowWidth >= 1025) {
+    // If the window width is greater than or equal to 1025px, show the pollution data
+    pollutionDataElement.classList.remove("hide-box");
+    // Remove the event listener that hides the pollution data on click
+    document.removeEventListener("click", hidePollutionData);
+  } else {
+    // If the window width is less than 1025px, hide the pollution data
+    pollutionDataElement.classList.add("hide-box");
+
+    // Add the event listener to hide the pollution data on click
+    document.addEventListener("click", hidePollutionData);
+  }
+}
+
+// Call the togglePollutionDataVisibility function when the page loads and on window resize
+document.addEventListener("DOMContentLoaded", function () {
+  // Initial check on page load
+  togglePollutionDataVisibility();
+
+  // Listen for window resize events
+  window.addEventListener("resize", togglePollutionDataVisibility);
+});
+
+// ...............................................................................
+
+// Rest of your existing code for fetching and displaying pollution data...
 
 // new pollution function 
 
@@ -705,9 +747,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Add event listener to the document to hide the pollution data on tap
+  // // old code working
+  // document.addEventListener("click", function (event) {
+  //   if (!event.target.closest("#pollution-data") && !event.target.closest("#toggle-pollution")) {
+  //     hidePollutionData();
+  //   }
+  // });
+
+
+  // Desktop code 
   document.addEventListener("click", function (event) {
-    if (!event.target.closest("#pollution-data") && !event.target.closest("#toggle-pollution")) {
-      hidePollutionData();
+    const windowWidth = window.innerWidth;
+
+    // Check if it's not in desktop mode (window width is less than 1025px)
+    if (windowWidth < 1025) {
+      if (!event.target.closest("#pollution-data") && !event.target.closest("#toggle-pollution")) {
+        hidePollutionData();
+      }
     }
   });
 
@@ -737,5 +793,92 @@ document.addEventListener("DOMContentLoaded", function () {
 //     popup.classList.toggle("hide-box");
 //   }
 // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ...............................................................................
+// desktop
+
+
+
+// expand buttons in desktop mode 
+
+
+// Function to expand hourly and daily boxes
+// function expandBoxes() {
+//   var windowWidth = window.innerWidth;
+
+//   // Check if the window width meets the condition (min-width: 1025px)
+//   if (windowWidth >= 1025) {
+//     // Expand the hourly and daily boxes
+//     document.getElementById("hourly-box").classList.remove("hide-box");
+//     document.getElementById("daily-box").classList.remove("hide-box");
+//   } else {
+//     // Optionally, you can hide the boxes if the condition is not met
+//     document.getElementById("hourly-box").classList.add("hide-box");
+//     document.getElementById("daily-box").classList.add("hide-box");
+//   }
+// }
+
+// // Call the function when the page loads and on window resize
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Initial expansion check on page load
+//   expandBoxes();
+
+//   // Listen for window resize events
+//   window.addEventListener("resize", expandBoxes);
+// });
+
+
+
+
+// Function to expand hourly and daily boxes
+function expandBoxes() {
+  var windowWidth = window.innerWidth;
+  var pollutionBox = document.getElementById("pollution-box");
+
+  // Check if the window width meets the condition (min-width: 1025px)
+  if (windowWidth >= 1025) {
+    // Expand the hourly and daily boxes
+    document.getElementById("hourly-box").classList.remove("hide-box");
+    document.getElementById("daily-box").classList.remove("hide-box");
+    document.getElementById("desktop-title").classList.remove("hide-box");
+
+
+    // Expand the pollution box
+    pollutionBox.classList.remove("hide-box");
+  } else {
+    // Optionally, you can hide the boxes if the condition is not met
+    document.getElementById("hourly-box").classList.add("hide-box");
+    document.getElementById("daily-box").classList.add("hide-box");
+    document.getElementById("desktop-title").classList.add("hide-box");
+
+
+    // Hide the pollution box
+    pollutionBox.classList.add("hide-box");
+  }
+}
+
+// Call the function when the page loads and on window resize
+document.addEventListener("DOMContentLoaded", function () {
+  // Initial expansion check on page load
+  expandBoxes();
+
+  // Listen for window resize events
+  window.addEventListener("resize", expandBoxes);
+});
+
+
+
 
 
