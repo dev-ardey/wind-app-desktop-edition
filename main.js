@@ -811,37 +811,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// expand buttons in desktop mode 
-
-
-// Function to expand hourly and daily boxes
-// function expandBoxes() {
-//   var windowWidth = window.innerWidth;
-
-//   // Check if the window width meets the condition (min-width: 1025px)
-//   if (windowWidth >= 1025) {
-//     // Expand the hourly and daily boxes
-//     document.getElementById("hourly-box").classList.remove("hide-box");
-//     document.getElementById("daily-box").classList.remove("hide-box");
-//   } else {
-//     // Optionally, you can hide the boxes if the condition is not met
-//     document.getElementById("hourly-box").classList.add("hide-box");
-//     document.getElementById("daily-box").classList.add("hide-box");
-//   }
-// }
-
-// // Call the function when the page loads and on window resize
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Initial expansion check on page load
-//   expandBoxes();
-
-//   // Listen for window resize events
-//   window.addEventListener("resize", expandBoxes);
-// });
-
-
-
-
+// // working code
 // Function to expand hourly and daily boxes
 function expandBoxes() {
   var windowWidth = window.innerWidth;
@@ -853,6 +823,10 @@ function expandBoxes() {
     document.getElementById("hourly-box").classList.remove("hide-box");
     document.getElementById("daily-box").classList.remove("hide-box");
     document.getElementById("desktop-title").classList.remove("hide-box");
+    document.getElementById("toggleButton-hour").disabled = true;
+    // document.querySelectorAll("air-shield-popup").classList.remove("hide-box");
+
+
 
 
     // Expand the pollution box
@@ -862,6 +836,9 @@ function expandBoxes() {
     document.getElementById("hourly-box").classList.add("hide-box");
     document.getElementById("daily-box").classList.add("hide-box");
     document.getElementById("desktop-title").classList.add("hide-box");
+
+
+    // document.querySelectorAll("air-shield-popup").classList.add("hide-box");
 
 
     // Hide the pollution box
@@ -877,6 +854,69 @@ document.addEventListener("DOMContentLoaded", function () {
   // Listen for window resize events
   window.addEventListener("resize", expandBoxes);
 });
+
+
+
+
+
+
+
+// not working
+// function expandBoxes() {
+//   var windowWidth = window.innerWidth;
+//   var pollutionBox = document.getElementById("pollution-box");
+//   var airShieldPopups = document.querySelectorAll(".air-shield-popup");
+
+//   // Check if the window width meets the condition (min-width: 1025px)
+//   if (windowWidth >= 1025) {
+//     // Always show the .air-shield-popup box
+//     airShieldPopups.forEach(function (element) {
+//       element.classList.remove("hide-box");
+//     });
+
+//     // Expand the hourly and daily boxes
+//     document.getElementById("hourly-box").classList.remove("hide-box");
+//     document.getElementById("daily-box").classList.remove("hide-box");
+//     document.getElementById("desktop-title").classList.remove("hide-box");
+
+//     // Expand the pollution box
+//     pollutionBox.classList.remove("hide-box");
+//     document.getElementById("air-shield-popup-red-id").classList.remove("show-background");
+//     document.getElementById("air-shield-popup-green-id").classList.remove("show-background");
+
+
+
+
+//   } else {
+//     // Hide the .air-shield-popup box when the condition is not met
+//     airShieldPopups.forEach(function (element) {
+//       element.classList.add("hide-box");
+//     });
+
+//     // Optionally, you can hide the hourly, daily, and desktop-title boxes if the condition is not met
+//     document.getElementById("hourly-box").classList.add("hide-box");
+//     document.getElementById("daily-box").classList.add("hide-box");
+//     document.getElementById("desktop-title").classList.add("hide-box");
+
+//     // Hide the pollution box
+//     pollutionBox.classList.add("hide-box");
+//     document.getElementById("air-shield-popup-red-id").classList.add("show-background");
+//     document.getElementById("air-shield-popup-green-id").classList.add("show-background");
+
+
+
+
+//   }
+// }
+
+// // Call the function when the page loads and on window resize
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Initial expansion check on page load
+//   expandBoxes();
+
+//   // Listen for window resize events
+//   window.addEventListener("resize", expandBoxes);
+// });
 
 
 

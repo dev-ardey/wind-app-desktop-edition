@@ -7,445 +7,529 @@
   <title>AirShield - Your Shield Against polluted air</title>
   
   <link rel="icon" type="image/x-icon" href="/assets/activated-shield-b03a1822.svg">
-  <script type="module" crossorigin src="/assets/index-0e22a985.js"></script>
+  <script type="module" crossorigin src="/assets/index-9909a598.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-3cfb730f.js">
-  <link rel="stylesheet" href="/assets/index-2049d341.css">
+  <link rel="stylesheet" href="/assets/index-d27b6847.css">
 </head>
 
 
-<body class="blurred neumorphic-block">
 
-  <!-- blurred within body : class="blurred" for loading without info later -->
 
-  <!-- <img src="images/activated-shield.svg" alt="activated-shield" id="pic-id"> -->
-  <div class="air-shield-popup " id="hide-popup-red">
-    <div id="overlay-red" class="hidden">
-      <!-- class="hidden?" -->
-      <div id="air-shield-popup-red-id" class="hidden neumorphic-block">
-        <ul class="popup-list ">
-          <img src="/assets/clear-shield-29986638.svg" class="air-shield-popup-img">
-          <p class="popup-text-big label">Protection Advised</p>
-          <p class="popup-text-med label">How do i SHIELD myself from polluted AIR</p>
-          <br>
-          <br>
-          <li class="popup-text-small">Close the windows</li>
-          <br>
-          <li class="popup-text-small">Check AirShield before leaving</li>
-          <br>
-          <li class="popup-text-small">Use HEPA filter air purifiers indoors</li>
-          <br>
-          <li class="popup-text-small">Try and go to a non polluted zone when outside</li>
-          <br>
-          <li class="popup-text-small">When having physical activity, limit exposure to polluted air zone</li>
-          <br>
-          <li class="popup-text-small">Use N95 masks, those filter >95% or 99% of inhaled particles at 0.3 μm in size
-          </li>
-          <br>
-          <br>
-          <p class="text-src"> View USER GUIDE for scientific studies </p>
-        </ul>
-      </div>
+<body class=" neumorphic-block">
+  <div class="loading">
+    <p>Loading…
+      <br><br>
+      Calculating your safety
+    </p>
+  </div>
+  <div class="blurred">
+    <div class="desktop-grid-container">
+      <!-- <div class="dg1"> Airshield title</div> -->
+      <!-- <div class="dg2"> </div> -->
+      <!-- <div class="dg3"> </div> -->
+      <!-- <div class="dg4"> </div> -->
+
+      <!-- <div class="dg6"> </div> -->
+      <!-- <div class="dg7"> </div> -->
+      <!-- <div class="dg8"> </div> -->
+      <!-- <div class="dg9"> </div> -->
     </div>
+    <!-- blurred within body : class="blurred" for loading without info later -->
 
-
-    <div class="air-shield-popup " id="hide-popup-green">
-      <div id="overlay-green" class="hidden">
+    <!-- <img src="images/activated-shield.svg" alt="activated-shield" id="pic-id"> -->
+    <div class="air-shield-popup" id="hide-popup-red">
+      <div id="overlay-red" class="hidden">
         <!-- class="hidden?" -->
-        <div id="air-shield-popup-green-id" class="hidden neumorphic-block">
-          <ul class="popup-list">
-            <img src="/assets/checked-shield-b046a8ae.svg" class="air-shield-popup-img">
-            <p class="popup-text-big label">No protection needed</p>
+        <div id="air-shield-popup-red-id" class="hidden neumorphic-block">
+          <ul class="popup-list ">
+            <img src="/assets/clear-shield-29986638.svg" class="air-shield-popup-img">
+            <p class="popup-text-big label">Protection Advised</p>
             <p class="popup-text-med label">How do i SHIELD myself from polluted AIR</p>
             <br>
             <br>
-            <li class="popup-text-small">Check AirShield before leaving</li>
+            <li class="popup-text-small">Close the windows</li>
             <br>
-            <li class="popup-text-small">You are free to open the windows</li>
+            <li class="popup-text-small">Check AirShield before leaving</li>
             <br>
             <li class="popup-text-small">Use HEPA filter air purifiers indoors</li>
             <br>
-            <li class="popup-text-small">Isolate seams and cracks in your house</li>
+            <li class="popup-text-small">Try and go to a non polluted zone when outside</li>
             <br>
-            <li class="popup-text-small">When having physical activity, <br>stay within clean air zone</li>
+            <li class="popup-text-small">When having physical activity, limit exposure to polluted air zone</li>
             <br>
-            <!-- <li class="popup-text-small">Use N95 masks, those filter >95% or 99% <br> of inhaled particles at 0.3 μm in size</li>
-            <br> -->
+            <li class="popup-text-small">Use N95 masks, those filter >95% or 99% of inhaled particles at 0.3 μm in size
+            </li>
+            <br>
             <br>
             <p class="text-src"> View USER GUIDE for scientific studies </p>
           </ul>
         </div>
       </div>
 
-      <div id="pollution-box" class="">
-        <div id="overlay" class=""></div>
-        <div id="pollution-data" class="hide-box neumorphic-block">
-          <br>
-          <img id="particle-img-popup" src="/assets/particle-small-a4cdc936.png">
-          <br>
-          <br>
-          <h2 class="label" id="pollution-h2">Air Quality Index <span id="aqi"></span></h2>
-          <h3 class="" id="pollution-h3">Components*</h3>
-          <ul class="" id="pollution-list">
-            <li>CO: <span id="co"></span></li>
-            <li>NO: <span id="no"></span></li>
-            <li>NO2: <span id="no2"></span></li>
-            <li>O3: <span id="o3"></span></li>
-            <li>SO2: <span id="so2"></span></li>
-            <li>PM2.5: <span id="pm2_5"></span></li>
-            <li>PM10: <span id="pm10"></span></li>
-          </ul>
-          <br>
-          <p>*Parts per million</p>
-        </div>
-      </div>
 
-
-
-      <header class="header neumorphic-block">
-
-        <div class="" id="nav-block">
-          <div id="home" class="neumorphic-block">
-            <a href="home.html" class="label">User guide</a>
-            <button type="button" id="home-button" onclick="location.href='home.html'"></button>
+      <div class="air-shield-popup" id="hide-popup-green">
+        <div id="overlay-green" class="hidden">
+          <!-- class="hidden?" -->
+          <div id="air-shield-popup-green-id" class="hidden neumorphic-block">
+            <ul class="popup-list">
+              <img src="/assets/checked-shield-b046a8ae.svg" class="air-shield-popup-img">
+              <p class="popup-text-big label">No protection needed</p>
+              <p class="popup-text-med label">How do i SHIELD myself from polluted AIR</p>
+              <br>
+              <br>
+              <li class="popup-text-small">Check AirShield before leaving</li>
+              <br>
+              <li class="popup-text-small">You are free to open the windows</li>
+              <br>
+              <li class="popup-text-small">Use HEPA filter air purifiers indoors</li>
+              <br>
+              <li class="popup-text-small">Isolate seams and cracks in your house</li>
+              <br>
+              <li class="popup-text-small">When having physical activity, <br>stay within clean air zone</li>
+              <br>
+              <!-- <li class="popup-text-small">Use N95 masks, those filter >95% or 99% <br> of inhaled particles at 0.3 μm in size</li>
+            <br> -->
+              <br>
+              <p class="text-src"> View USER GUIDE for scientific studies </p>
+            </ul>
           </div>
-          <!-- <div id="AirShield" class="neumorphic-block"></div> -->
         </div>
-        <!-- <div id="countdown-timer">wind calc</div> -->
-        <div class="current-location " id="current-id">
-          <span class="location-name neumorphic-block" id="current-location-id">
-            CLOSEST
-            POLLUTER <br>TATA
-            STEEL</span>
-          <div id="particle-div" class="neumorphic-block">
-            <div class="info-group" id="weather-icon-id">PARTICLES</div>
-            <!-- <div class="fill-div"></div> -->
-            <div id="pollution-button">
-              <img id="particle-img" src="/assets/particle-small-a4cdc936.png">
-              <button type="button" id="toggle-pollution"></button>
+
+        <div class="dg7">
+          <div id="pollution-box" class="">
+            <div id="overlay" class=""></div>
+            <div id="pollution-data" class="hide-box neumorphic-block">
+              <br>
+              <img id="particle-img-popup" src="/assets/particle-small-a4cdc936.png">
+              <br>
+              <br>
+              <h2 class="label" id="pollution-h2">Air Quality Index <span id="aqi"></span></h2>
+              <h3 class="" id="pollution-h3">Components*</h3>
+              <ul class="desktop-pollution-text" id="pollution-list">
+                <li>CO: <span id="co"></span></li>
+                <li>NO: <span id="no"></span></li>
+                <li>NO2: <span id="no2"></span></li>
+                <li>O3: <span id="o3"></span></li>
+                <li>SO2: <span id="so2"></span></li>
+                <li>PM2.5: <span id="pm2_5"></span></li>
+                <li>PM10: <span id="pm10"></span></li>
+              </ul>
+              <br>
+              <p class="desktop-pollution-text">*Parts per million</p>
             </div>
           </div>
         </div>
-        <div class="map-div">
-          <div class="map-with-location" id="map-div-id">
-            <img src="/assets/clean-9d8ed5a5.png" id="pollution-angle" class="pollution-angle-class">
-            <img src="/assets/map-no-data-e86eaa5e.png" id="temp-map-img" class="neumorphic-block">
+
+        <!-- desktop pollution box -->
+
+        <div class="dg9">
+          <div id="pollution-box-desktop" class="">
+            <div id="pollution-data-desktop" class="hide-box neumorphic-block">
+              <br>
+              <img id="particle-img-popup" src="/assets/particle-small-a4cdc936.png">
+              <br>
+              <br>
+              <h2 class="label" id="pollution-h2">Air Quality Index <span id="aqi"></span></h2>
+              <h3 class="" id="pollution-h3">Components*</h3>
+              <ul class="" id="pollution-list">
+                <li>CO: <span id="co-desktop"></span></li>
+                <li>NO: <span id="no-desktop"></span></li>
+                <li>NO2: <span id="no2-desktop"></span></li>
+                <li>O3: <span id="o3-desktop"></span></li>
+                <li>SO2: <span id="so2-desktop"></span></li>
+                <li>PM2.5: <span id="pm2_5-desktop"></span></li>
+                <li>PM10: <span id="pm10-desktop"></span></li>
+              </ul>
+              <br>
+              <p>Desktop *Parts per million</p>
+            </div>
           </div>
         </div>
-        <!-- temporary wind sign -->
-        <div class="inline-div">
-          <div class="info-group" id="temp-id">
-            <div id="temp-text-id">TEMPERATURE</div>
-            <div id="neumorphic-temp" class="neumorphic-block">
-              <div class="" id="temp-current-id"><span data-current-temp>0</span><span
-                  class="value-sub-info">&deg;</span>
+
+
+        <div class="dg5">
+          <header class="header ">
+
+            <div class="" id="nav-block">
+              <div id="home" class="neumorphic-block">
+                <a href="home.html" class="label">User guide</a>
+                <button type="button" id="home-button" onclick="location.href='home.html'"></button>
               </div>
-              <img class="weather-icon large, icon-header, header-icon" id="weather-icon-img" src="icons/sun.png"
-                data-current-icon>
+              <!-- <div id="AirShield" class="neumorphic-block"></div> -->
             </div>
+            <!-- <div id="countdown-timer">wind calc</div> -->
+        </div>
+
+        <div class="dg1">
+          <div id="desktop-title" class="hide-box">
+            <p> <img id="desktop-title-img" src="/assets/favicon-small-png-173a9b4e.png">AirShield</p>
+
           </div>
-          <div class="info-group" id="shield-id">
-            <!-- AirShield button -->
-            <button id="overlay-button" class="">
-            </button>
-            <div id="air-shield-text">AIRSHIELD ADVICE:</div>
-            <span id="value-shield"></span>
-            <div id="neumorphic-shield" class="neumorphic-block">
-              <span class="value-shield"></span>
-              <!-- header-icon class removed , circle removed -->
-              <img class="weather-icon large, icon-header, shield-icon" id="air-shield-img-id"
-                src="/assets/checked-shield-b046a8ae.svg">
-              <img class="weather-icon large, icon-header, shield-icon, " id="green-cloud-id"
-                src="/assets/green-cloud-b22336c0.svg">
+          <div class="current-location " id="current-id">
+            <span class="location-name neumorphic-block" id="current-location-id">
+              CLOSEST
+              POLLUTER <br>TATA
+              STEEL</span>
+            <div id="particle-div" class="neumorphic-block">
+              <div class="info-group" id="weather-icon-id">PARTICLES</div>
+              <!-- <div class="fill-div"></div> -->
+              <div id="pollution-button">
+                <img id="particle-img" src="/assets/particle-small-a4cdc936.png">
+                <button type="button" id="toggle-pollution"></button>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="label neumorphic-block" id="current-text"><span>Currently</span></div>
-        <div class="border"></div>
-        <div class="header-top">
-          <div class="header-current-wind">
-            <!-- hidden data current wind class, only for development -->
-            <span data-current-wind class="hidden">0</span>
-            <!-- &deg; -->
-          </div>
-          <!-- class="green-arrow-current" tijdelijk weg omdat die niet goed was -->
-          <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-current" id="green-arrow-id">
-        </div>
-        <div class="air-api">
-          <div id="wind-direction" class="neumorphic-block">The wind from tatasteel is not blowing towards your location
-          </div>
-        </div>
-        <div class="header-bottom">
-          <div class="info-group, hidden">
-            <div class="label">High</div>
-            <div><span data-current-high="">32</span>&deg;C</div>
-          </div>
-          <div class="info-group, hidden">
-            <div class="label">Low</div>
-            <div><span data-current-low="">32</span>&deg;C</div>
-          </div>
-          <div class="info-group">
-            <div class="" id="wind-direction-in-hours">wind direction changes in</div>
-            <div><span id="hours-until-change-id" class="">0</span></div>
-          </div>
-          <!-- hidden -->
-          <div class="info-group, hidden">
-            <div class="label">precip</div>
-            <div><span data-current-precip="">0.1</span><span class="value-sub-info">mm</span></div>
           </div>
         </div>
 
 
-      </header>
-      <button id="toggleButton-day">
-        <div class="label neumorphic-block" id="daily-text"><span>daily</span></div>
-      </button>
-      <div id="daily-box" class="expand-box">
-        <section id="daily-background" class="day-section neumorphic-block" data-day-section>
-          <div class="day-card">
-            <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
-            <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-day">
-            <div class="day-card-day">Monday </div>
-            <div>32&deg;</div>
+        <div class="dg2">
+          <div class="map-div">
+            <div class="map-with-location" id="map-div-id">
+              <img src="/assets/pollution-angle-0-98ae599a.png" id="pollution-angle" class="pollution-angle-class">
+              <img src="/assets/map-no-data-e86eaa5e.png" id="temp-map-img" class="neumorphic-block">
+            </div>
           </div>
-          <div class="day-card">
-            <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
-            <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-day">
-            <div class="day-card-day">Tuesday </div>
-            <div>32&deg;</div>
-          </div>
-          <div class="day-card">
-            <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
-            <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-day">
-            <div class="day-card-day">Wednesday </div>
-            <div>32&deg;</div>
-          </div>
-          <div class="day-card">
-            <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
-            <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-day">
-            <div class="day-card-day">Thursday </div>
-            <div>32&deg;</div>
-          </div>
-          <div class="day-card">
-            <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
-            <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-day">
-            <div class="day-card-day">Friday </div>
-            <div>32&deg;</div>
-          </div>
-          <div class="day-card">
-            <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
-            <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-day">
-            <div class="day-card-day">Saturday </div>
-            <div>32&deg;</div>
-          </div>
-          <div class="day-card">
-            <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
-            <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-day">
-            <div class="day-card-day">Sunday </div>
-            <div>32&deg;</div>
-          </div>
-        </section>
-      </div>
-      <button id="toggleButton-hour">
-        <div class="label neumorphic-block" id="hourly-text"><span>hourly</span></div>
-      </button>
-      <div id="hourly-box" class="expand-box">
-        <table class="hour-section neumorphic-block">
-          <tbody data-hour-section>
-            <tr class="hour-row">
-              <td>
-                <div class="info-group">
-                  <div class="label">Monday</div>
-                  <div>15:00</div>
-                </div>
-              </td>
-              <td>
-                <img src="icons/cloud.png" class="weather-icon">
-              </td>
-              <td>
-                <div class="info-group">
-                  <div class="label">Temp</div>
-                  <div>31&deg;</div>
-                </div>
-              </td>
-              <td>
-                <div class="info-group">
-                  <div class="label">Wind</div>
-                  <div>8k<span class="value-sub-info">km/h</span></div>
-                </div>
-              </td>
-              <td>
-                <div class="info-group">
-                  <div class="label">Precip</div>
-                  <div>0.2<span class="value-sub-info">mm</span></div>
-                </div>
-              </td>
-            </tr>
-            <tr class="hour-row">
-              <td>
-                <div class="info-group">
-                  <div class="label">Monday</div>
-                  <div>15:00</div>
-                </div>
-              </td>
-              <td>
-                <img src="icons/cloud.png" class="weather-icon">
-              </td>
-              <td>
-                <div class="info-group">
-                  <div class="label">Temp</div>
-                  <div>31&deg;</div>
-                </div>
-              </td>
-              <td>
-                <div class="info-group">
-                  <div class="label">Wind</div>
-                  <div>8k<span class="value-sub-info">km/h</span></div>
-                </div>
-              </td>
-              <td>
-                <div class="info-group">
-                  <div class="label">Precip</div>
-                  <div>0.2<span class="value-sub-info">mm</span></div>
-                </div>
-              </td>
-            </tr>
-            <tr class="hour-row">
-              <td>
-                <div class="info-group">
-                  <div class="label">Monday</div>
-                  <div>15:00</div>
-                </div>
-              </td>
-              <td>
-                <img src="icons/cloud.png" class="weather-icon">
-              </td>
-              <td>
-                <div class="info-group">
-                  <div class="label">Temp</div>
-                  <div>31&deg;</div>
-                </div>
-              </td>
-              <td>
-                <div class="info-group">
-                  <div class="label">Wind</div>
-                  <div>8k<span class="value-sub-info">km/h</span></div>
-                </div>
-              </td>
-              <td>
-                <div class="info-group">
-                  <div class="label">Precip</div>
-                  <div>0.2<span class="value-sub-info">mm</span></div>
-                </div>
-              </td>
-            </tr>
-            <tr class="hour-row">
-              <td>
-                <div class="info-group">
-                  <div class="label">Monday</div>
-                  <div>15:00</div>
-                </div>
-              </td>
-              <td>
-                <img src="icons/cloud.png" class="weather-icon">
-              </td>
-              <td>
-                <div class="info-group">
-                  <div class="label">Temp</div>
-                  <div>31&deg;</div>
-                </div>
-              </td>
-              <td>
-                <div class="info-group">
-                  <div class="label">Wind</div>
-                  <div>8k<span class="value-sub-info">km/h</span></div>
-                </div>
-              </td>
-              <td>
-                <div class="info-group">
-                  <div class="label">Precip</div>
-                  <div>0.2<span class="value-sub-info">mm</span></div>
-                </div>
-              </td>
-            </tr>
-            <tr class="hour-row">
-              <td>
-                <div class="info-group">
-                  <div class="label">Monday</div>
-                  <div>15:00</div>
-                </div>
-              </td>
-              <td>
-                <img src="icons/cloud.png" class="weather-icon">
-              </td>
-              <td>
-                <div class="info-group">
-                  <div class="label">Temp</div>
-                  <div>31&deg;</div>
-                </div>
-              </td>
-              <td>
-                <div class="info-group">
-                  <div class="label">Wind</div>
-                  <div>8k<span class="value-sub-info">km/h</span></div>
-                </div>
-              </td>
-              <td>
-                <div class="info-group">
-                  <div class="label">Precip</div>
-                  <div>0.2<span class="value-sub-info">mm</span></div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <template id="day-card-template">
-        <div class="day-card">
-          <img data-icon class="weather-icon, hidden" alt="">
-          <img src="images/green-arrow.svg" alt="↑" class="green-arrow-day" id="green-arrow-day-id">
-          <!-- deze aanpassen van weather icon data toevoegen wind direction daily -->
-          <div class="day-card-day" data-date> </div>
-          <div class=""><span data-temp></span><span>&deg;C</span></div>
         </div>
-      </template>
-      <template id="hour-row-template">
-        <tr class="hour-row">
-          <td>
-            <div class="info-group">
-              <div class="label" data-day></div>
-              <div class="label" data-time></div>
+
+
+
+        <div class="dg4">
+          <div class="inline-div">
+            <div class="info-group" id="temp-id">
+              <div id="temp-text-id">TEMPERATURE</div>
+              <div id="neumorphic-temp" class="neumorphic-block">
+                <div class="" id="temp-current-id"><span data-current-temp>0</span><span
+                    class="value-sub-info">&deg;</span>
+                </div>
+                <img class="weather-icon large, icon-header, header-icon" id="weather-icon-img" src="icons/sun.png"
+                  data-current-icon>
+              </div>
             </div>
-          </td>
-          <td>
-            <img data-icon class="weather-icon">
-          </td>
-          <td>
-            <div class="info-group">
-              <div class="label">Temp</div>
-              <div class="label"><span data-temp></span><span>&deg;C</span></div>
+
+
+            <div class="info-group" id="shield-id">
+              <!-- AirShield button -->
+              <button id="overlay-button" class="">
+              </button>
+              <div id="air-shield-text">AIRSHIELD ADVICE:</div>
+              <span id="value-shield"></span>
+              <div id="neumorphic-shield" class="neumorphic-block">
+                <span class="value-shield"></span>
+                <!-- header-icon class removed , circle removed -->
+                <img class="weather-icon large, icon-header, shield-icon" id="air-shield-img-id"
+                  src="/assets/checked-shield-b046a8ae.svg">
+                <img class="weather-icon large, icon-header, shield-icon, " id="green-cloud-id"
+                  src="/assets/green-cloud-b22336c0.svg">
+              </div>
             </div>
-          </td>
-          <td>
-            <div class="info-group">
-              <div class="label">Wind</div>
-              <img src="images/green-arrow.svg" alt="↑" class="green-arrow-hour" id="green-arrow-hour-id">
-              <div class="hidden"><span data-wind></span><span class="value-sub-info">&deg;</span></div>
+
+
+          </div>
+        </div>
+
+        <div class="dg3">
+
+          <div class="label neumorphic-block" id="current-text"><span>Currently</span></div>
+          <div class="border"></div>
+          <div class="header-top">
+            <div class="header-current-wind">
+              <!-- hidden data current wind class, only for development -->
+              <span data-current-wind class="hidden">0</span>
+              <!-- &deg; -->
             </div>
-          </td>
-          <td class="hidden">
+            <!-- class="green-arrow-current" tijdelijk weg omdat die niet goed was -->
+            <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-current" id="green-arrow-id">
+          </div>
+          <div class="air-api">
+            <div id="wind-direction" class="neumorphic-block">The wind from tatasteel is not blowing towards your
+              location
+            </div>
+          </div>
+
+        </div>
+
+        <div class="dg3">
+          <div class="header-bottom">
+            <div class="info-group, hidden">
+              <div class="label">High</div>
+              <div><span data-current-high="">32</span>&deg;C</div>
+            </div>
+            <div class="info-group, hidden">
+              <div class="label">Low</div>
+              <div><span data-current-low="">32</span>&deg;C</div>
+            </div>
+            <div class="info-group">
+              <div class="" id="wind-direction-in-hours">wind direction changes in</div>
+              <div><span id="hours-until-change-id" class="">0</span></div>
+            </div>
             <!-- hidden -->
-            <div class="hidden ">
-              <div class="label">Precip</div>
-              <div><span data-precip></span><span class="value-sub-info">mm</span></div>
+            <div class="info-group, hidden">
+              <div class="label">precip</div>
+              <div><span data-current-precip="">0.1</span><span class="value-sub-info">mm</span></div>
             </div>
-          </td>
-        </tr>
-      </template>
+          </div>
+        </div>
 
-      
-      
-      
+        </header>
+
+        <div class="dg8">
+
+          <button id="toggleButton-day">
+            <div class="label neumorphic-block" id="daily-text"><span>daily</span></div>
+          </button>
+          <div id="daily-box" class="expand-box">
+            <section id="daily-background" class="day-section neumorphic-block" data-day-section>
+              <div class="day-card">
+                <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
+                <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-day">
+                <div class="day-card-day">Monday </div>
+                <div>32&deg;</div>
+              </div>
+              <div class="day-card">
+                <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
+                <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-day">
+                <div class="day-card-day">Tuesday </div>
+                <div>32&deg;</div>
+              </div>
+              <div class="day-card">
+                <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
+                <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-day">
+                <div class="day-card-day">Wednesday </div>
+                <div>32&deg;</div>
+              </div>
+              <div class="day-card">
+                <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
+                <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-day">
+                <div class="day-card-day">Thursday </div>
+                <div>32&deg;</div>
+              </div>
+              <div class="day-card">
+                <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
+                <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-day">
+                <div class="day-card-day">Friday </div>
+                <div>32&deg;</div>
+              </div>
+              <div class="day-card">
+                <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
+                <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-day">
+                <div class="day-card-day">Saturday </div>
+                <div>32&deg;</div>
+              </div>
+              <div class="day-card">
+                <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
+                <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-day">
+                <div class="day-card-day">Sunday </div>
+                <div>32&deg;</div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="dg6 neumorphic-block">
+          <div id="hourly-empty-block"></div>
+          <button id="toggleButton-hour">
+            <div class="label neumorphic-block" id="hourly-text"><span>hourly</span></div>
+          </button>
+          <div id="hourly-box" class="expand-box">
+            <table class="hour-section neumorphic-block">
+              <tbody data-hour-section>
+                <tr class="hour-row">
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Monday</div>
+                      <div>15:00</div>
+                    </div>
+                  </td>
+                  <td>
+                    <img src="icons/cloud.png" class="weather-icon">
+                  </td>
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Temp</div>
+                      <div>31&deg;</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Wind</div>
+                      <div>8k<span class="value-sub-info">km/h</span></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Precip</div>
+                      <div>0.2<span class="value-sub-info">mm</span></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="hour-row">
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Monday</div>
+                      <div>15:00</div>
+                    </div>
+                  </td>
+                  <td>
+                    <img src="icons/cloud.png" class="weather-icon">
+                  </td>
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Temp</div>
+                      <div>31&deg;</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Wind</div>
+                      <div>8k<span class="value-sub-info">km/h</span></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Precip</div>
+                      <div>0.2<span class="value-sub-info">mm</span></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="hour-row">
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Monday</div>
+                      <div>15:00</div>
+                    </div>
+                  </td>
+                  <td>
+                    <img src="icons/cloud.png" class="weather-icon">
+                  </td>
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Temp</div>
+                      <div>31&deg;</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Wind</div>
+                      <div>8k<span class="value-sub-info">km/h</span></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Precip</div>
+                      <div>0.2<span class="value-sub-info">mm</span></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="hour-row">
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Monday</div>
+                      <div>15:00</div>
+                    </div>
+                  </td>
+                  <td>
+                    <img src="icons/cloud.png" class="weather-icon">
+                  </td>
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Temp</div>
+                      <div>31&deg;</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Wind</div>
+                      <div>8k<span class="value-sub-info">km/h</span></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Precip</div>
+                      <div>0.2<span class="value-sub-info">mm</span></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="hour-row">
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Monday</div>
+                      <div>15:00</div>
+                    </div>
+                  </td>
+                  <td>
+                    <img src="icons/cloud.png" class="weather-icon">
+                  </td>
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Temp</div>
+                      <div>31&deg;</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Wind</div>
+                      <div>8k<span class="value-sub-info">km/h</span></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="info-group">
+                      <div class="label">Precip</div>
+                      <div>0.2<span class="value-sub-info">mm</span></div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <template id="day-card-template">
+          <div class="day-card">
+            <img data-icon class="weather-icon, hidden" alt="">
+            <img src="images/green-arrow.svg" alt="↑" class="green-arrow-day" id="green-arrow-day-id">
+            <!-- deze aanpassen van weather icon data toevoegen wind direction daily -->
+            <div class="day-card-day" data-date> </div>
+            <div class=""><span data-temp></span><span>&deg;C</span></div>
+          </div>
+        </template>
+        <template id="hour-row-template">
+          <tr class="hour-row">
+            <td>
+              <div class="info-group">
+                <div class="label" data-day></div>
+                <div class="label" data-time></div>
+              </div>
+            </td>
+            <td>
+              <img data-icon class="weather-icon">
+            </td>
+            <td>
+              <div class="info-group">
+                <div class="label">Temp</div>
+                <div class="label"><span data-temp></span><span>&deg;C</span></div>
+              </div>
+            </td>
+            <td>
+              <div class="info-group">
+                <div class="label">Wind</div>
+                <img src="images/green-arrow.svg" alt="↑" class="green-arrow-hour" id="green-arrow-hour-id">
+                <div class="hidden"><span data-wind></span><span class="value-sub-info">&deg;</span></div>
+              </div>
+            </td>
+            <td class="hidden">
+              <!-- hidden -->
+              <div class="hidden ">
+                <div class="label">Precip</div>
+                <div><span data-precip></span><span class="value-sub-info">mm</span></div>
+              </div>
+            </td>
+          </tr>
+        </template>
+
+        
+        
+        
+      </div>
 </body>
 
 </html>

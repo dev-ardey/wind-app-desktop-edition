@@ -237,6 +237,7 @@ a:active {
   height: 1.8rem;
   width: 13rem;
   margin-bottom: 20px;
+  height: 2rem;
 
 }
 
@@ -950,18 +951,15 @@ a:active {
   }
   
   .super-container-text{
-      /* color: navy; */
       font-size: xx-large;
       z-index: 5;
-      /* display: none; */
       display: flex;
       justify-content: center;
       margin-left: 1100px;
-      min-width: 492px;
+      /* min-width: 492px; */
       margin-top: 10%;
-      /* margin-top: 30%; */
       position: absolute;
-      position: fixed;
+      /* position: fixed; */
       padding-right: 200px;
     }
 
@@ -987,7 +985,8 @@ a:active {
       font-size: xx-large;
       width: 30rem;
       margin-bottom: 100px;
-    
+      height: 5rem;
+
     }
 
   #hero-img {
