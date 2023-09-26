@@ -98,7 +98,8 @@ body {
 /* fout zit tussen hier */
 
 .show-background {
-  background-color: var(--greyLight-1);
+  /* background-color: var(--greyLight-1); */
+  background-color: #e4ebf5c1;
 }
 
 #overlay-red {
@@ -110,7 +111,7 @@ body {
   /* height: 2000px; */
   height: 140vh;
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   /* margin vanwege auto div */
   /* margin-left: -10px; */
 }
@@ -126,7 +127,7 @@ body {
   /* height: 130%; */
   height: 140vh;
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   /* margin vanwege auto div */
   /* margin-left: -10px; */
 }
@@ -143,7 +144,7 @@ body {
   margin-top: 50px;
   border-radius: 60px;
   /* box-shadow: 0px 40px 40px rgba(1, 41, 94, 0.9) ; */
-  z-index: 3;
+  z-index: 4;
   text-align: center;
   padding: 10px;
   /* padding-bottom: 60px; */
@@ -161,7 +162,7 @@ body {
   margin-top: 50px;
   border-radius: 60px;
   /* box-shadow: 0px 40px 40px rgba(1, 41, 94, 0.9) ; */
-  z-index: 3;
+  z-index: 4;
   text-align: center;
   padding: 10px;
   /* padding-bottom: 60px; */
@@ -254,7 +255,7 @@ body {
   /* background-color: transparent; */
   border: none;
   cursor: pointer;
-  z-index: 3;
+  z-index: 4;
 }
 
 #overlay-button-img {
@@ -286,8 +287,9 @@ body {
   /* display: none; */
 }
 #weather-icon-img {
-  margin-left: 25px;
-  margin-bottom: 5px;
+  margin-left: 30px;
+  /* margin-bottom: 5px; */
+  margin-top: -28px;
  }
 
 #weather-icon-id{
@@ -305,7 +307,8 @@ body {
 }
 
 #temp-current-id {
-  padding-bottom: 10px;
+  margin-top: 36px;
+  margin-left: 50px;
 }
 
 #air-shield-text {
@@ -315,6 +318,9 @@ body {
 #value-shield {
   font-size: 1rem;
   margin-bottom: -10px;
+  z-index: 3;
+  margin-left: -30px;
+  padding-top: 20px;
 }
 
 .green-arrow-current {
@@ -372,8 +378,9 @@ body {
 #nav-block {
   display: flex;
   justify-content: left;
-  margin-bottom: -32.5px;
-  max-width: 75%;
+  margin-bottom: -372.5px;
+  max-width: 10rem;
+  margin-top: -80px;
 }
 
 #home {
@@ -401,7 +408,7 @@ body {
     cursor: pointer;
     display: flex;
     justify-self: center;
-    z-index: 2;
+    z-index: 4;
     /* left: 75%; */
 }
 
@@ -447,9 +454,12 @@ a:active {
   justify-content: space-between;
   /* grid-template-columns: repeat(2, 1fr); */
   padding-bottom: 5%;
-  margin-bottom: -20%;
-  margin-bottom: -50px;
+  margin-bottom: -10px;
+  margin-top: 30px;
+  margin-top: 50px;
+
 }
+
 
 
 
@@ -463,6 +473,9 @@ a:active {
   margin-bottom: -40px;
   width: 10rem;
   height: 40px;
+  margin-left: 24px;
+  margin-top: 8px;
+  /* background-color: #5b0eeb; */
 }
 
 .location-name {
@@ -493,7 +506,9 @@ a:active {
   /* text-shadow: 0px 0px 5px rgb(255, 255, 255,0.5); */
   display: flex;
   justify-self: right;
-  margin-top: -30px;
+  margin-top: 10px;
+  margin-bottom: -20px;
+  z-index: 3;
 }
 
 #temp-text-id {
@@ -501,6 +516,9 @@ a:active {
   /* font-size: 1.5rem; */
   color: var(--greyDark);
   /* text-shadow: 0px 0px 5px rgb(255, 255, 255,0.5); */
+  margin-bottom: -45px;
+  z-index: 2;
+  margin-right: -110px;
 }
 
 .map-div {
@@ -508,12 +526,13 @@ a:active {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;;
+  height: 100%;
   max-width: 800px;
   /* background-color: white; */
   border-radius: 20px;
   color: black;
-  padding-top: 10%;
+  padding: 20px;
+  padding-top: 50px;
 }
 
 #map-div-id {
@@ -559,15 +578,17 @@ a:active {
   display: flex;
   justify-self: right;
   justify-content: center;
-  border-radius: 40px;
+  border-radius: 50px;
+  width: 100px;
+  margin-top: 50px;
+  margin-left: -30px
 }
 
 #neumorphic-temp {
   border-radius: 50px;
-  width: 60px;
-  padding: 30px 0px 0px 0px;
-  height: 120px;
-  margin-top: 10px;
+  width: 90px;
+  height: 90px;
+  margin-left: 110px;
 }
 
 #air-shield-text {
@@ -575,13 +596,17 @@ a:active {
   /* font-size: 1.5rem; */
   color: var(--greyDark);
   /* text-shadow: 0px 0px 5px rgb(255, 255, 255,0.5); */
+  z-index: 2;
+  margin-left: -30px;
+  margin-bottom: -20px;
 }
 
 #shield-id {
   display: flex;
   justify-self: left;
   border-radius: 40px;
-  margin-top: 20px;
+  margin-top: 26px;
+  margin-right: -20px;
 }
 
 .shield-icon {
@@ -589,12 +614,15 @@ a:active {
 }
 
 #neumorphic-shield {
-  border-radius: 50px;
-  width: 240px;
+  border-radius: 60px;
+  width: 220px;
   padding: 5px 0px 0px 50px;
-  height: 50px;
-  margin-top: 20px;
+  height: 100px;
+  margin-top: -50px;
+  margin-right: 38px;
   animation: pulse 5s ease-in-out infinite;
+  padding-top: 50px;
+  margin-top: -50px;
 
 }
 
@@ -725,11 +753,11 @@ a:active {
 
 #wind-direction {
   
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   display: grid;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 50px;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -739,7 +767,10 @@ a:active {
   /* font-size: 1.2rem; */
   color: var(--white);
   text-shadow: 0px 0px 5px rgb(255, 255, 255,0.5);
-  margin-bottom: 5%;
+  margin-bottom: 10px;
+  
+  margin-right: 10px;
+  margin-left: 10px;
   border: 4px solid var(--greyLight-1);
   /* background: linear-gradient(270deg, rgba(0, 255, 157), rgb(0, 195, 255)); */
   /* background: linear-gradient(270deg, rgb(255, 112, 119), rgb(252, 74, 127)); */
@@ -900,12 +931,17 @@ a:active {
   padding-bottom: 10px;
   padding-top: 10px;
   margin-top: 20px;
-  margin-bottom: -10px;
+  margin-bottom: -40px;
+  margin-left: 60px;
+  margin-right: 60px;
+
   /* box-shadow: 0px 20px 40px  rgb(0, 134, 243, 0.5) ; */
   /* border: 2px solid rgb(0, 204, 255); */
   border-radius: 60px;
   cursor: pointer;
 }
+
+
 
 #hourly-text {
   display: flex;
@@ -916,6 +952,8 @@ a:active {
   border-radius: 10px;
   padding-bottom: 10px;
   padding-top: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
   /* box-shadow: 0px 20px 40px  rgb(0, 134, 243, 0.5) ; */
   border: 4px solid var(--greyLight-1);
   border-radius: 60px;
@@ -935,6 +973,8 @@ a:active {
   padding-bottom: 10px;
   padding-top: 10px;
   margin-top: 50px;
+  margin-left: 60px;
+  margin-right: 60px;
   /* box-shadow: 0px 20px 40px  rgb(0, 134, 243, 0.5) ; */
   border: 4px solid var(--greyLight-1);
   border-radius: 60px;
@@ -944,6 +984,14 @@ a:active {
   animation: pulse 5s ease-in-out infinite;
 }
 
+.dg6 {
+  background: var(--greyLight-1);
+    box-shadow: none;
+}
+
+#daily-box {
+  margin-bottom: 30px;
+}
 
 
 .expand-box {
@@ -990,12 +1038,13 @@ a:active {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: 4;
 }
 
 #pollution-button {
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 
 #toggle-pollution {
@@ -1009,7 +1058,7 @@ a:active {
   cursor: pointer;
   display: flex;
   justify-self: center;
-  z-index: 2;
+  z-index: 5;
   margin-top: -25px;
   /* left: 75%; */
 
@@ -1020,19 +1069,22 @@ a:active {
   display: hidden;
   width: 30px;
   height: 30px;
-  margin-top: 43px;
+  margin-top: 26px;
   animation: particle 10s linear infinite;
 }
 
-#particle-div{
+#particle-div {
   border-radius: 50px;
-  margin-top: 28px;
+  /* margin-top: 28px; */
+  margin-top: -42px;
   margin-bottom: -30px;
-  width: 50px;
+  width: 140px;
   height: 100px;
-  margin-right: 10px;
+  margin-right: 20px;
+  padding: 5px;
+  padding-top: 0px;
   animation: pulse 5s ease-in-out infinite;
-
+  z-index: 4;
 }
 
 #particle-img-popup {
@@ -1041,6 +1093,7 @@ a:active {
   height: 100px;
   margin-top: 15px;
   animation: particle 20s linear infinite;
+  
 }
 /* .hide-box {
   display: none;
@@ -1062,7 +1115,7 @@ a:active {
   margin-top: 50px;
   border-radius: 60px;
   /* box-shadow: 0px 40px 40px rgba(1, 41, 94, 0.9) ; */
-  z-index: 2;
+  z-index: 5;
   text-align: center;
   padding: 20px;
   padding-bottom: 60px;
@@ -1115,8 +1168,36 @@ a:active {
   }
 }
 
+
+
+
+
+/* airshield v2 edits */
+
+#desktop-title {
+  font-size: 2rem;
+  width: 100%;
+  height: 100px;
+  margin-top: -40px;
+  /* margin-top: 20px; */
+}
+
+#desktop-title-img {
+  height: 3rem;
+  border-radius: 50%;
+  margin-bottom: -0.75rem;
+  margin-right: 1rem;
+  /* margin-top: -200px; */
+}
+
+
 /* closing media for mobile */
 /* } */
+
+
+
+
+
 
 
 /* ...................................................................................... */
@@ -1166,7 +1247,7 @@ a:active {
       height: 100px;
       border-radius: 50%;
       margin-bottom: -25px;
-      margin-right: 1rem;
+      margin-left: -600px;
     }
 
     .current-location {
@@ -1264,10 +1345,7 @@ a:active {
       padding: 60px;
     }
 
-    #air-shield-text {
-      margin-top: -20px;
-      margin-bottom: 10px;
-    }
+ 
 
     #neumorphic-shield {
       animation: none;
@@ -1337,6 +1415,9 @@ a:active {
       overflow: scroll;
       border-radius: 60px;
       margin-left: 40px;
+      background: var(--greyLight-1);
+      box-shadow:.8rem .8rem 1.4rem var(--greyLight-2), 
+      -.2rem -.2rem 1.8rem var(--white);
     }
 
     #hourly-text {
@@ -1383,12 +1464,12 @@ a:active {
 
     #toggleButton-hour {
       position: relative;
-      /* background-color: rgba(190, 68, 46, 0.5); */
+      background-color: rgba(190, 68, 46, 0);
       width: 100%;
       height: 26650px;
       margin: -26650px;
       cursor: default;
-      z-index: 2;
+      z-index: 4;
       /* margin-top: 100px; */
       /* pointer-events: none; */
     }
@@ -1659,7 +1740,7 @@ a:active {
     
 
     #desktop-title-img {
-      margin-left: 250px;
+      margin-left: -650px;
     }
         
     .dg4 {
@@ -1673,11 +1754,6 @@ a:active {
       /* background-color: #5b0eeb; */
       margin-top: 30px;
       padding: 60px;
-    }
-
-    #air-shield-text {
-      margin-top: -20px;
-      margin-bottom: 10px;
     }
 
     #neumorphic-shield {
