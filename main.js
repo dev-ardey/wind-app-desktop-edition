@@ -477,7 +477,7 @@ if ("geolocation" in navigator) {
           document.getElementById("green-cloud-id").classList.toggle("flowing-cloud");
 
           document.getElementById("overlay-button").addEventListener("click", function () {
-            document.getElementById("overlay-green").classList.toggle("darken");
+            // document.getElementById("overlay-green").classList.toggle("darken");
             document.getElementById("air-shield-popup-green-id").classList.toggle("show");
 
             document.getElementById("overlay-green").classList.toggle("show-background");
@@ -636,29 +636,66 @@ document.addEventListener("DOMContentLoaded", function () {
 function togglePollutionDataVisibility() {
   const windowWidth = window.innerWidth;
   const pollutionDataElement = document.getElementById("pollution-data");
+  const overlayElement = document.getElementById("overlay");
+
 
   if (windowWidth >= 1025) {
-    // If the window width is greater than or equal to 1025px, show the pollution data
+    //pollution data
     pollutionDataElement.classList.remove("hide-box");
-    // Remove the event listener that hides the pollution data on click
-    document.removeEventListener("click", hidePollutionData);
+    overlayElement.classList.remove("show-background");
+
+    // when resizing remove popup green
+    document.getElementById("overlay-green").classList.remove("show-background");
+    document.getElementById("air-shield-popup-green-id").classList.remove("show");
+    document.getElementById("hide-popup-green").classList.remove("show");
+    document.getElementById("overlay-button").classList.remove("move-button-up");
+
+
+    // when resizing remove popup red
+    document.getElementById("overlay-red").classList.remove("show-background");
+    document.getElementById("air-shield-popup-red-id").classList.remove("show");
+    document.getElementById("hide-popup-red").classList.remove("show");
+    document.getElementById("overlay-red").classList.remove("show-background");
+    document.getElementById("overlay-button").classList.remove("move-button-up");
+
+
   } else {
-    // If the window width is less than 1025px, hide the pollution data
     pollutionDataElement.classList.add("hide-box");
 
-    // Add the event listener to hide the pollution data on click
-    document.addEventListener("click", hidePollutionData);
+    // when resizing remove popup green
+    document.getElementById("overlay-green").classList.remove("show-background");
+    document.getElementById("air-shield-popup-green-id").classList.remove("show");
+    //  document.getElementById("hide-popup-green").classList.remove("show");
+    document.getElementById("overlay-button").classList.remove("move-button-up");
+
+
+    // when resizing remove popup red
+    document.getElementById("overlay-red").classList.remove("show-background");
+    document.getElementById("air-shield-popup-red-id").classList.remove("show");
+    //  document.getElementById("hide-popup-red").classList.remove("show");
+    document.getElementById("overlay-red").classList.remove("show-background");
+    document.getElementById("overlay-button").classList.remove("move-button-up");
+
+
+
+    //make air particles clickable when using togglePollutionDataVisibility 
+    var particleDiv = document.getElementById("particle-div");
+    if (particleDiv.style.zIndex === "3") {
+      particleDiv.style.zIndex = "4";
+    }
+
+
   }
 }
 
-// Call the togglePollutionDataVisibility function when the page loads and on window resize
+// Call the togglePollutionDataVisibility function when the page loads
 document.addEventListener("DOMContentLoaded", function () {
   // Initial check on page load
   togglePollutionDataVisibility();
-
-  // Listen for window resize events
-  window.addEventListener("resize", togglePollutionDataVisibility);
 });
+
+// Listen for window resize events
+window.addEventListener("resize", togglePollutionDataVisibility);
 
 // ...............................................................................
 
